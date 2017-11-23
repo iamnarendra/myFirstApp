@@ -1,0 +1,11 @@
+#photos {
+    border: 1px solid #00aaff;
+    margin: 5px;
+    padding: 10px;
+    width: 150px;
+    height: 300px;
+    float:left;
+}
+p{
+    overflow-y: hidden;
+}

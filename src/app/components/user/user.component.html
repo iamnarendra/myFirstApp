@@ -1,0 +1,34 @@
+<h1>Welcome to Angular..!  {{name}}</h1>
+<br>
+Age: {{age}}<br>
+Email: {{email}}<br>
+Address: {{address.street}} , {{address.village}} , {{address.state}}.<br>
+
+<button type='submit' >Click Me</button>
+<br><br>
+<form (submit)='addHobby(hobby.value)'>
+    <label for="hobby">Hobbies: </label>
+    <input type="text" #hobby>
+</form>
+<h1>Hobbies:</h1> 
+<ul>
+    <li *ngFor='let hobby of hobbies'>{{hobby}}<button (click)='deleteHobby(hobby)'>X</button></li>
+</ul>
+<form>
+    <label for="name">Name:</label>
+    <input type="text" [(ngModel)]='name' name='name'><br>
+    <label for="email">Email:</label>
+    <input type="text" [(ngModel)]='email' name='email'><br>
+    <label for="street">Street:</label>
+    <input type="text" [(ngModel)]='address.street' name='street'><br>
+    <label for="village">Village:</label>
+    <input type="text" [(ngModel)]='address.village' name='village'><br>
+    <label for="state">State:</label>
+    <input type="text" [(ngModel)]='address.state' name='state'><br>
+</form>
+<h3>Calling data using Services</h3>
+<div id='photos' *ngFor='let post of posts'>
+    <h4>{{post.id}}</h4>
+    <h4>{{post.title}}</h4>
+    <img src='{{post.thumbnailUrl}}'/>
+</div>
